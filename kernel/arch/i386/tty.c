@@ -46,6 +46,13 @@ void term_putcat(unsigned char c, uint8_t colour, size_t x, size_t y) {
 void term_putc(char c) {
 	unsigned char uc = c;
 
+	if (c == '\n') {
+		term_col = 0;
+		term_row++;
+
+		return;
+	}
+
 	term_putcat(uc, term_colour, term_col, term_row);
 
 	if (++term_col == VGA_WIDTH) {
