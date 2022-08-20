@@ -21,7 +21,7 @@ void term_init(void) {
 	term_row = 0;
 	term_col = 0;
 
-	term_colour = vga_entry_colour(VGA_COLOUR_LIGHT_GREY, VGA_COLOUR_BLACK);
+	term_colour = vga_entry_colour(VGA_COLOUR_GREEN, VGA_COLOUR_BLACK);
 	term_buffer = VGA_MEMORY;
 
 	for (size_t y = 0; y < VGA_HEIGHT; y++) {
